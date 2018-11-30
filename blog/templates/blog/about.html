@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+    <div class="content-section">
+	<legend class="border-bottom mb-3"> About Us </legend>
+	<div>
+        <div>
+        	<p> <img src="{% static "about.png" %}" alt="My image" max-width=100% max-height=100% > </p>
+        </div>
+            <h5> Learnium: Learn Technology </h5>
+        	<p> In here at Learnium, you are able to became a member
+            <ul class="mt-1"> 
+                <li> Free Membership: You will be able to view our Blog Posts and Free Courses </li>
+                <li> Enterprise Membership: You will be able to access out special Computer Science courses </li>
+                <li> Professional Membership: Have access to each and every feature of Learnium </li>
+            </ul>
+            </p>
+            <p>
+        	Our courses are everything and anything about Technology, from developing a website to cryptography, we are ar your service. <br>
+            Not only will you view our blog posts, you are able to create your own! Just register and you'll find out.
+            </p>
+	</div>
+</div>
+{% endblock content %}
