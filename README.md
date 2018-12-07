@@ -31,12 +31,12 @@ APIs Used:
 Documentation:
 
 - Home 
-<img src="/documentation/home1.png" alt="home">
-<img src="/documentation/home2 .png" alt="home">
-<img src="/documentation/home3 .png" alt="home">
+<img src="/documentation/Home1.png" alt="home">
+<img src="/documentation/Home2.png" alt="home">
+<img src="/documentation/Home3.png" alt="home">
 
 - Register, or Login
-<img src="/documentation/register .png" alt="register">
+<img src="/documentation/register.png" alt="register">
 <img src="/documentation/Login.png" alt="login">
 
 - Change Membership, the Default Membership is Free
@@ -59,5 +59,5 @@ Documentation:
 - Log Out
 <img src="/documentation/logout.png" alt="logout">
 
-Poster
+Poster <br>
 <img src="/documentation/poster.png" alt="poster">
