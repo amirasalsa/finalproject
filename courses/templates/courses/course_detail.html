@@ -6,10 +6,10 @@
 
 {% block content %}
 	<div class="content-section">
-		<div class="row">
-			<div class="col-sm-4 col-md-4">
-				<h1>Course Detail View Page</h1>
-				<h3>{{ object.title }}</h3>
+		 <legend class="border-bottom mb-3"> Course Lessons </legend>
+				
+				<p>
+				<h5>{{ object.title }}</h5>  </p>
 				<p>{{ object.description }}</p>
 				<ol>
 					{% for lesson in object.lessons %}
@@ -17,8 +17,6 @@
 					{% endfor %}
 				</ol>
 				
-			</div>
 		</div>
-	</div>
 
 {% endblock %}

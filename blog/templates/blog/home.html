@@ -1,21 +1,152 @@
 {% extends "blog/base.html" %}
 {% block content %}
+
+<div class="content-section">
+  <div>
+      <h3 class="mt-2"> Popular Courses </h3>
+      <h5> Applied Cryptpgraphy </h5>
+        <table>
+          <tr>
+            <th>
+            <video controls
+             controlsList="nodownload"
+             poster="/media/ACIntroduction_gizhcpc.png""
+               src="/static/videos/AppliedCryptography/Introduction.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+            </video>
+            </th>
+            <th>
+            <video controls
+             controlsList="nodownload"
+             poster="/media/ACSymmetricCryptography_XrIxwhn.png"
+               src="/static/videos/AppliedCryptography/SymmetricCryptography.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+            </video>
+            </th>
+            <th>
+            <video controls
+             controlsList="nodownload"
+             poster="/media/ACXorFunction.png"
+               src="/static/videos/AppliedCryptography/XorFunction.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+        </tr>
+      </table>
+
+    <h5> C++ Programming </h5>
+      <table>
+        <tr>
+          <th>
+          <video controls
+             controlsList="nodownload"
+             poster=""
+               src="/static/videos/C++Programming/FirstProgram.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+          <th>
+          <video controls
+             controlsList="nodownload"
+             poster=""
+               src="/static/videos/C++Programming/VariablesUserInputMathOp.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+          <th>
+          <video controls
+             controlsList="nodownload"
+             poster=""
+               src="/static/videos/C++Programming/WhileLoops.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+        </tr>
+      </table>
+
+          <h5> Calculus </h5>
+      <table>
+        <tr>
+          <col width="33.33%">
+          <th>
+          <video controls
+             controlsList="nodownload"
+             poster=""
+               src="/static/videos/Calculus/Functions.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+          <th>
+          <video controls
+             controlsList="nodownload"
+             poster="/media/CVerticalLineTest_Ms3yPyQ.png"
+               src="/static/videos/Calculus/Vertical Line Test.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+          <th>
+          <video controls
+             controlsList="nodownload"
+             poster=""
+               src="/static/videos/Calculus/Domain and Range of a Function From a Graph.mp4"
+               width="100%"
+               height="auto"
+               class="mb-4 mt-4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          </th>
+        </tr>
+      </table>
+
+  </div>
+</div>
+
+<div class="content-section">
+  <div>
+      <h3 class="mt-2"> Recent Posts </h3>
     {% for post in posts %}
         <article class="media content-section">
-          <img class="rounded-circle article-img" src="{{ post.reviewer.profile.image.url }}">
+          <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="{% url 'user-posts' post.reviewer.username %}">{{ post.reviewer }}</a>
+              <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
             </div>
             <h3 class="mt-2"><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a> </h3>
-            <h4 class="text-muted"> By: {{ post.author }} </h4> 
+            <h5 class="text-muted"> Course: {{ post.category }} </h5> 
             <p class="article-content">{{ post.content|truncatewords:50 }} <a href="{% url 'post-detail' post.id %}" class="text-muted"> (Read more) </a></p>
           </div>
         </article>
+
     {% endfor %}
 
-  
+
+          </div>
+</div>
     {% if is_paginated %}
 
       {% if page_obj.has_previous %}

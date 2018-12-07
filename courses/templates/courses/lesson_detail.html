@@ -9,20 +9,18 @@
 {% endblock %}
 
 {% block content %}
-	<div class='container'>
-		<h1>Lesson Detail View</h1>
-		<div class='row'>
-			<div class='col-sm-6 col-md-6'>
+	<div class="content-section">
+		 <legend class="border-bottom mb-3"> {{ object.course }}</legend>
+
 				{% if object is not None %}
-				<h3>{{ object.title }}</h3>
-				<p>{{ object.description }}</p>
-				
+				<h5>{{ object.title }}</h5>
 				<video controls
 					   controlsList="nodownload"
 					   poster="{{ object.thumbnail.url }}"
 				       src="/static{{ object.video_url }}"
-				       width="300"
-				       height="200">
+				       width="100%"
+				       height="auto"
+				       class="mb-4 mt-4">
 				    Sorry, your browser doesn't support embedded videos.
 				</video>
 				{% else %}
@@ -32,8 +30,7 @@
 				<a href="{% url 'memberships:select' %}"><button class="btn btn-warning">Check out memberships</button></a>
 				<hr>
 				{% endif %}
-			</div>
-		</div>
+
 	</div>
 
 {% endblock content %}
