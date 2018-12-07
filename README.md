@@ -60,4 +60,4 @@ Documentation:
 <img src="/documentation/logout.png" alt="logout">
 
 Poster
-<img src="/documentation/logout.png" alt="logout">
+<img src="/documentation/poster.png" alt="poster">
